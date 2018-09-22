@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% extends 'basic_app/base.html'%}
+<!-- Load the customer template tags -->
+{% load my_extras %}
+
+{% block body_block %}
+<h1>Welcome to INDEX</h1>
+<h2>This is the contents of the index.html shown using template inheritance</h2>
+<h2>
+  {{ text | mytag:'world' }}
+  {{ number| add:"1000" }}
+</h2>
+{% endblock %}
